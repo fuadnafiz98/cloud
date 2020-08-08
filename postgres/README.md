@@ -2,7 +2,7 @@
 
 ## Installation
 
-  go to `https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-0://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04` for installation
+  [go here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-0://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04) for installation
 
 ### Setup
 

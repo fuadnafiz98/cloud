@@ -1,8 +1,72 @@
 # POSTGRESQL
 
-## Installation
+## Initial Installation on Ubuntu(18.04)
 
-  [go here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-0://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04) for installation
+- you can always go [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-0://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04) for more information
+
+- run
+  ```bash
+  $ sudo apt update 
+  $ sudo apt install postgresql postgresql-contrib
+  ```
+- create a new ubuntu user 
+  ```bash
+  $ sudo adduser demo
+  ```
+- switch to new user
+  ```bash
+  $ sudo -i -u demo
+  ```
+
+- create new database
+  ```bash
+  $ createdb demodb
+  ```
+- execute postgresql   `$ psql`
+
+- show all database  `\l`
+
+- connect to database
+  ```bash
+  $ \c deomdb
+  ```
+
+- create table
+  ```bash
+  create table person (
+    id BIGSERIAL not null primary key,
+    firstName varchar(50) not null,
+    lastName varchar(50) not null,
+  );
+  ```
+
+- show all table `\d`
+- show column of one table `\d <table_name>`
+
+  - ```bash
+    $ \d person
+    ```
+
+- insert data
+
+  ```bash
+  insert into person (
+  firstName, 
+  lastName, 
+  ) values( 'fuad', 'muhtasim');
+  ```
+
+- select data 
+
+  ```bash
+  $ select * from person
+  ```
+
+
+## Links
+
+  - [mock data](https://www.mockaroo.com/)
+
 
 ### Setup
 
@@ -57,41 +121,41 @@ dateOfBirth DATE not null
 
 - **insert into table**
 
-```bash
-insert into person (
-firstName, 
-lastName, 
-gender,
-dateOfBirth
-) values( 'fuad', 'muhtasim', 'male', DATE '1998-03-01');
-```
+  ```bash
+  insert into person (
+  firstName, 
+  lastName, 
+  gender,
+  dateOfBirth
+  ) values( 'fuad', 'muhtasim', 'male', DATE '1998-03-01');
+  ```
 
+- **limit output** 
 
+  `select * from person limit 10;`
 
+- **offset**
 
+  starts from offset position
+  ```bash
+  select * from person offset 5;
+  ```
 
+- **select query in array**
 
+  `select * from person where country in ('bangladesh', 'india', 'england', 'spain');`
 
+- **between**
 
+  `select * from person between date '2000-01-01' and '2000-02-02'
 
+- **select table**
+  `select * from pg_catalog.pg_tables where tableowner='demo02';`
 
+- **MAX, MIN, AVG**
 
+- **group by**
 
+  - TODO: write details 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 

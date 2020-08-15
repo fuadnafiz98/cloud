@@ -7,7 +7,9 @@
     - `src/redis-server`
   - run cli
     - `src/redis-cli`
-
+  - check redis status
+    - `sudo systemctl status redis`
+  
 > __NOTES__
   - Redis requires two TCP ports
     - One for client serve, like 6379
@@ -16,6 +18,8 @@
         - __cluster bus__ is a node-to-node communication channel using a *binary protocol* used for 
         failure detection, configuration update, failover authorization
         - *binary port* is used because of little bandwidth and processing time.
+
+![image](https://blog.resellerspanel.com/wp-content/uploads/2017/09/redis-master-slave-data-replication.jpeg)
 
 __REDIS CLUSTER__
   - Redis cluster provides a way to run redis where data is **automatically shared across multiple Redis Node**
@@ -78,3 +82,7 @@ __Creating and Using Redis Cluster__
   - output
   
     ![image](images/cluster02.png)
+
+## Random Medium Posts and Notes
+
+
